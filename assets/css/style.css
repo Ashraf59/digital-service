@@ -201,6 +201,17 @@ body.nav-active{overflow: hidden;}
   width: 100%;
 }
 
+.text-center{
+  text-align: center;
+}
+
+.section-text{
+  margin-block: 15px 50px;
+}
+.grid-list{
+  display: grid;
+  gap: 50px;
+}
 
 
 
@@ -316,15 +327,84 @@ body.nav-active{overflow: hidden;}
 
 .hero .btn{margin-block-start: 15px;}
 
+.hero-banner .w-100{
+  max-width: max-content;
+}
+
+.hero .shap{
+  display: none;
+}
+
+
+
+
+
 
 
 /*-----------------------------------*\
   #PROCESS
 \*-----------------------------------*/
 
+.process-banner{
+  display: none;
+}
 
+.process{
+  position: relative;
+}
 
+.process::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/process-bg.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  pointer-events: none;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+}
 
+.process-item .item-icon{
+  margin-inline: auto;
+  filter: var(--shadow-1);
+}
+
+.process-item .item-title{
+  margin-block: 20px 10px;
+}
+
+.img-holder{
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--bg-white-alpha-10);
+  overflow: hidden;
+}
+
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-2);
+}
+
+.work-card .card-banner{
+  border-radius: var(--radius-40);
+  margin-block-end: 20px;
+}
+
+.work-card:is(:hover, :focus-within) .img-cover{transform: scale(1.1);}
+
+.work-card .card-title{
+  margin-block-end: 12px;
+  transition: var(--transition-2);
+}
+
+.work-card .card-title:is(:hover, :focus-visible){
+  color: var(--text-sunglow);
+}
 
 /*-----------------------------------*\
   #WORK
